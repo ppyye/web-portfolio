@@ -35,7 +35,7 @@ header .container nav > ul li a { color: black; font-weight: 600; text-decoratio
 
 
 .section3 { background-color: #ded7d4; position: relative; }
-.section3 .sec3-title {position:relative; left:6%; margin-top:10%;
+.section3 .sec3-title {position:relative; left:100px; margin-top:10%;
     font-size: 5rem; font-weight:900; }
 
 .section3 .tb-content {margin-top: 3%;}
@@ -66,14 +66,26 @@ padding: 0 10px; margin: 10px;}
 .section4 .content img { width: 100%; border-radius: 0 0 10px 10px; border: 3px solid black; }
 
 .section4 .project1 { position: relative; width: 30%; }
-.section4 .project2 { position: relative; width: 55%; margin-top: 15%; }
+.section4 .project2 { position: relative; width: 52%; margin-top: 15%; }
 
 .section5 { background-color: #e2e5ea;}
 .section5 .sec5-title {margin: 0 auto; font-size: 5rem; font-weight:900;
 text-align: center; margin-top: 20%;}
 
 .section5 ul { display: flex; justify-content: center; padding-inline-start:unset; }
-.section5 ul li { list-style: none; padding: 10px;}
+.section5 ul li { list-style: none; padding: 10px 25px;}
+.section5 ul li p { visibility: hidden; position: absolute; font-weight: 600; margin: 5px 0;}
+.section5 ul li p a { text-decoration: none; color: black;}
 
 footer .goto { position: absolute; bottom:0; right:0; margin: 10px; padding: 10px;}
 footer .goto a { color: black; }
+
+@media (max-width: 760px) {
+    header .container {justify-content: center;}
+}
+
+@media (max-width: 600px) {
+    header .container {justify-content: unset; padding: unset;}
+    header .container nav > ul { flex-direction: column; gap: 15px; text-align: right;}
+    header .container nav > ul li:not(:last-child):after { content: unset; margin: unset; }
+}
