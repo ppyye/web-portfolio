@@ -17,7 +17,8 @@
 <body>
 <header>
     <div class="container">
-        <nav>
+        <span class="menu-toggle material-symbols-outlined" onclick="toggle()">menu</span>
+        <nav id="nav-list">
             <ul class="menu">
                 <li class=""><a href="#0">main</a></li>
                 <li class=""><a href="#1">intro</a></li>
@@ -117,22 +118,24 @@
         </div>
     </section>
     <section class="section5">
-        <div class="wrapper">
-            <div class="sec5-title">CONTACT</div>
-            <ul>
-                <li>
-                    <i onclick="iconClick(this.id)" id="mail-icon" class="fa fa-envelope fa-3x" aria-hidden="true"></i>
-                    <p id="mail">6076hs@gmail.com</p>
-                </li>
-                <li>
-                    <i onclick="iconClick(this.id)" id="phone-icon" class="fa fa-phone-square fa-3x" aria-hidden="true"></i>
-                    <p id="phone">010-1234-5678</p>
-                </li>
-                <li>
-                    <i onclick="iconClick(this.id)" id="github-icon" class="fa fa-github-square fa-3x" aria-hidden="true"></i>
-                    <p id="github"><a href="https://github.com/ppyye" target="_blank">https://github.com/ppyye</a></p>
-                </li>
-            </ul>
+        <div class="image">
+            <div class="wrapper">
+                <div class="sec5-title">CONTACT</div>
+                <ul>
+                    <li>
+                        <i onclick="iconClick(this.id)" id="mail-icon" class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+                        <p id="mail">6076hs@gmail.com</p>
+                    </li>
+                    <li>
+                        <i onclick="iconClick(this.id)" id="phone-icon" class="fa fa-phone-square fa-3x" aria-hidden="true"></i>
+                        <p id="phone">010-1234-5678</p>
+                    </li>
+                    <li>
+                        <i onclick="iconClick(this.id)" id="github-icon" class="fa fa-github-square fa-3x" aria-hidden="true"></i>
+                        <p id="github"><a href="https://github.com/ppyye" target="_blank">https://github.com/ppyye</a></p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 </div>
@@ -164,6 +167,29 @@
             $icon.style.visibility = 'hidden';
         }
     }
+</script>
 
+<script>
+    (window.onresize = function() {
+        const $btn = document.querySelector('.menu-toggle');
+        const $list = document.getElementById('nav-list');
+        if (matchMedia("screen and (max-width: 600px)").matches) {
+            $btn.style.display = 'inline';
+            $list.style.visibility = 'hidden';
+        } else {
+            $btn.style.display = 'none';
+            $list.style.visibility = 'visible';
+        }
+    })();
+
+    function toggle() {
+        const $list = document.getElementById('nav-list');
+
+        if($list.style.visibility !== 'visible') {
+            $list.style.visibility = 'visible';
+        } else {
+            $list.style.visibility = 'hidden';
+        }
+    }
 </script>
 </body>
