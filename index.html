@@ -158,9 +158,8 @@
 <script>
     function iconClick(click_id) {
         const display_id = click_id.split('-')[0];
-        console.log(display_id);
         const $icon = document.getElementById(`${display_id}`);
-        console.log($icon);
+
         if($icon.style.visibility !== 'visible') {
             $icon.style.visibility = 'visible';
         } else {
@@ -173,6 +172,7 @@
     (window.onresize = function() {
         const $btn = document.querySelector('.menu-toggle');
         const $list = document.getElementById('nav-list');
+
         if (matchMedia("screen and (max-width: 600px)").matches) {
             $btn.style.display = 'inline';
             $list.style.visibility = 'hidden';

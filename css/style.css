@@ -86,7 +86,7 @@ footer .goto { position: absolute; bottom:0; right:0; margin: 10px; padding: 10p
 footer .goto a { color: black; }
 
 @media (max-width: 760px) {
-    header .container {justify-content: center;}
+    header .container { justify-content: center; }
 }
 
 @media (max-width: 600px) {
