@@ -175,20 +175,20 @@
 
         if (matchMedia("screen and (max-width: 600px)").matches) {
             $btn.style.display = 'inline';
-            $list.style.visibility = 'hidden';
+            $list.style.display = 'none';
         } else {
             $btn.style.display = 'none';
-            $list.style.visibility = 'visible';
+            $list.style.display = 'unset';
         }
     })();
 
     function toggle() {
         const $list = document.getElementById('nav-list');
 
-        if($list.style.visibility !== 'visible') {
-            $list.style.visibility = 'visible';
+        if($list.style.display !== 'none') {
+            $list.style.display = 'none';
         } else {
-            $list.style.visibility = 'hidden';
+            $list.style.display = 'unset';
         }
     }
 </script>
